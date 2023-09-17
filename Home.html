@@ -6,48 +6,55 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Добро пожаловать на сайт о Dota 2</h1>
-        <nav>
-            <ul>
-                <li><a href="Home.html">Главная</a></li>
-                <li><a href="News.html">Новости</a></li>
-                <li><a href="Hero.html">Герои</a></li>
-                <li><a href="Tournaments.html">Турниры</a></li>
-                <li><a href="Stream.html">Стримы</a></li>
-                <li><a href="Forum.html">Форум</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-blue-700 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl">Добро пожаловать на сайт о Dota 2</h1>
+            <nav class="space-x-4">
+                <ul class="flex">
+                    <li><a href="Home.html" class="hover:text-gray-300">Главная</a></li>
+                    <li><a href="News.html" class="hover:text-gray-300">Новости</a></li>
+                    <li><a href="Hero.html" class="hover:text-gray-300">Герои</a></li>
+                    <li><a href="Tournaments.html" class="hover:text-gray-300">Турниры</a></li>
+                    <li><a href="Stream.html" class="hover:text-gray-300">Стримы</a></li>
+                    <li><a href="Forum.html" class="hover:text-gray-300">Форум</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="main-content">
-        <h2>Последние новости</h2>
-        <article>
-            <h3>Новый патч 7.34с</h3>
+    <!-- Main Content -->
+    <section class="container mx-auto my-8">
+        <h2 class="text-2xl font-bold mb-4">Последние новости</h2>
+        <article class="mb-8">
+            <h3 class="text-xl font-semibold">Новый патч 7.34с</h3>
             <p>Сегодня был выпущен долгожданный патч 7.34с, в котором произошло много изменений в балансе и геймплее.</p>
         </article>
 
-        <article>
-            <h3>Интервью с про-игроком</h3>
+        <article class="mb-8">
+            <h3 class="text-xl font-semibold">Интервью с про-игроком</h3>
             <p>Мы беседовали с известным игроком о его стратегии и взглядах на соревновательную Dota 2.</p>
         </article>
     </section>
 
-    <aside class="sidebar">
-        <h2>Популярные герои</h2>
-        <ul>
-            <li><a href="#">Слардар</a></li>
-            <li><a href="#">Виндраннер</a></li>
-            <li><a href="#">Тинкер</a></li>
-            <li><a href="#">Лина</a></li>
+    <!-- Sidebar -->
+    <aside class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-4">Популярные герои</h2>
+        <ul class="space-y-2">
+            <li><a href="#" class="text-blue-500 hover:underline">Слардар</a></li>
+            <li><a href="#" class="text-blue-500 hover:underline">Виндраннер</a></li>
+            <li><a href="#" class="text-blue-500 hover:underline">Тинкер</a></li>
+            <li><a href="#" class="text-blue-500 hover:underline">Лина</a></li>
         </ul>
     </aside>
 
-    <footer>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">Click me</button>
-
-        <p>&copy; 2023 Dota 2 Fan Site</p>
+    <!-- Footer -->
+    <footer class="bg-blue-700 text-white py-4 mt-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <p>&copy; 2023 Dota 2 Fan Site</p>
+        </div>
     </footer>
 </body>
 </html>
