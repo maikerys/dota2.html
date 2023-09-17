@@ -56,24 +56,47 @@
     <!-- Контент страницы -->
     <div class="container mt-5">
         <h1 class="text-center">Герои Dota 2</h1>
-            <!-- Пример карточки героя -->
-            <div class="col-3">
-                <class="hero-card">
-                    <img class="-2" src="img/download.jpg" alt="Изображение героя 1">
-                    <div class="hero-card-body">
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header bg-transparent border-success">Abadon</div>
-                <div class="card-body text-success">
-                  <h5 class="card-title">Abadon</h5>
-                  <p class="card-text">Abadon — могущественный герой в Dota 2, обладающий уникальной способностью Borrowed Time, которая позволяет ему выживать даже при критически низком здоровье, перенаправляя наносимый урон в исцелени</p>
-                </div>
-            <!-- Добавьте дополнительные карточки героев по аналогии -->
+        <div class="row" id="heroes-container">
+            <!-- Генерация карточек героев с использованием JavaScript -->
         </div>
     </div>
-     <!-- Подключение скриптов Bootstrap (Popper.js и Bootstrap JS) -->
+
+    <!-- Подключение скриптов Bootstrap (Popper.js и Bootstrap JS) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <div class="container text-center">
-        
+    
+    <script>
+        // Пример данных о героях (вам нужно будет добавить данные для всех 110 героев)
+        const heroesData = [
+            {
+                name: 'Abaddon',
+                imageSrc: 'img/download.jpg',
+                description: 'Abaddon — могущественный герой в Dota 2, обладающий уникальной способностью Borrowed Time, которая позволяет ему выживать даже при критически низком здоровье, перенаправляя наносимый урон в исцелени',
+            },
+            // Добавьте данные для остальных героев аналогичным образом
+        ];
+
+        // Функция для генерации карточек героев на основе данных
+        function generateHeroCards() {
+            const container = document.getElementById('heroes-container');
+            heroesData.forEach(hero => {
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'col-3';
+                cardDiv.innerHTML = `
+                    <div class="hero-card">
+                        <img class="-2" src="${hero.imageSrc}" alt="Изображение ${hero.name}">
+                        <div class="hero-card-body">
+                            <h2 class="hero-card-title">${hero.name}</h2>
+                            <p class="hero-card-description">${hero.description}</p>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(cardDiv);
+            });
+        }
+
+        // Вызываем функцию для генерации карточек при загрузке страницы
+        window.onload = generateHeroCards;
+    </script>
 </body>
 </html>
