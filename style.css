@@ -1,0 +1,27 @@
+/* Убираем подчеркивание для всех ссылок */
+a {
+    text-decoration: none;
+}
+
+/* Увеличиваем отступы для элементов внутри контейнера */
+.container {
+    padding: 20px;
+}
+
+/* Изменяем цвет текста и фона в header и footer */
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+/* Стилизуем текст популярных героев */
+ul.list-unstyled li a {
+    font-weight: bold;
+    color: white;
+}
+
+/* Убираем фоновое изображение для body */
+body {
+    background-size: 100% 100%;
+    background-image: none;
+}
